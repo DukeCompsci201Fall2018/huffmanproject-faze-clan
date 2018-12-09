@@ -37,9 +37,9 @@ public class HuffProcessor {
 
         int[] count = new int[ALPH_SIZE + 1];
         while (true) {
-            int val = in.readBits(BITS_PER_WORD);
-            if (val == -1) break;
-            count[val] += 1;
+            int x = in.readBits(BITS_PER_WORD);
+            if (x == -1) break;
+            count[x] += 1;
         }
         count[ALPH_SIZE] = 1;
         return count;
